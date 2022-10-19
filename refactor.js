@@ -1,27 +1,18 @@
-function returnRandomNumber() {
-  return Math.random();
-}
+const returnRandomNumber = () => Math.round(Math.random() * 100);
+const returnTextResponse = (response) => `Seu número é ${response}!`;
 
 function sumToRandomNumber(num) {
-  const numberToSum = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToSum * 100) + num}!`;
+  return returnTextResponse(returnRandomNumber() + num);
 }
 
 function subtractRandomNumber(num) {
-  const numberToSubtract = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToSubtract * 100) - num}!`;
+  return returnTextResponse(returnRandomNumber() - num);
 }
 
 function multiplyToRandomNumber(num) {
-  const numberToMultiply = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToMultiply * 100) * num}!`;
+  return returnTextResponse(returnRandomNumber() * num);
 }
 
 function divideRandomNumber(num) {
-  const numberToDivide = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToDivide * 100) / num}!`;
+  return returnTextResponse(returnRandomNumber() / num);
 }
